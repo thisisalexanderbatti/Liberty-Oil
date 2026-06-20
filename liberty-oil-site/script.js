@@ -443,6 +443,12 @@ const discountWinningIndexes = discountWheelSlices
   .filter((entry) => entry.slice.type !== "again");
 
 function initDiscountWheel() {
+  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+  const isHomePage = currentPage === "" || currentPage === "index.html";
+  if (!isHomePage) {
+    return;
+  }
+
   const storageKey = "libertyDiscountWheelResult";
   if (localStorage.getItem(storageKey) || document.querySelector(".discount-popup")) {
     return;
