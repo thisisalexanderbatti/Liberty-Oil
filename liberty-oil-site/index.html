@@ -3,30 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liberty Oil Inc | Oceanside Gas Station & Convenience Store</title>
-  <meta
-    name="description"
-    content="Liberty Oil Inc is a family-run gas station and convenience store in Oceanside, CA with low gas prices, diesel, snacks, and delivery."
-  >
+  <title>Liberty Oil Inc | Home</title>
+  <meta name="description" content="Liberty Oil Inc in Oceanside, CA offers gas, drinks, snacks, candy, beer and wine, energy drinks, and weekly store picks.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <p>Open Daily 7:00 AM - 12:00 AM</p>
+      <p>Open daily 7:00 AM - 12:00 AM</p>
       <div class="topbar-actions">
         <a href="tel:+17607548045">(760) 754-8045</a>
-        <a class="button button-small button-accent" href="#delivery">Order Delivery</a>
+        <a class="button button-small button-accent" href="specials.html">This Week's Specials</a>
       </div>
     </div>
   </div>
-
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
@@ -37,40 +30,34 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="soda.html">Store Items</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
+        <a href="specials.html">Specials</a>
+        <a href="beer-wine.html">Beer & Wine</a>
+        <a href="soda-beverage.html">Soda & Beverage</a>
+        <a href="candy.html">Candy</a>
+        <a href="energy-drinks.html">Energy Drinks</a>
+        <a href="snacks.html">Snacks</a>
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Local. Family-Run. Value-First.</p>
-          <h1>Low gas prices, friendly service, and everyday convenience.</h1>
+          <p class="eyebrow">Fast Stop. Local Feel. Everyday Favorites.</p>
+          <h1>Gas, drinks, snacks, and convenience all in one Oceanside stop.</h1>
           <p class="lede">
-            Liberty Oil Inc is a trusted Oceanside stop for fuel, diesel, quick snacks,
-            and late-night essentials. We keep things simple: fair prices, helpful people,
-            and a store that is easy to count on.
+            Liberty Oil Inc is a family-run local stop known for low gas prices, friendly service,
+            and a store packed with the categories people actually want: beer and wine, soda and beverages,
+            candy, energy drinks, snacks, and more.
           </p>
           <div class="cta-row">
-            <a
-              class="button button-primary"
-              href="https://www.google.com/maps/search/?api=1&query=1943+S+Coast+Hwy+Oceanside+CA+92054"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Get Directions
-            </a>
-            <a class="button button-secondary" href="tel:+17607548045">Call Now</a>
-            <a class="button button-ghost" href="#delivery">Order Delivery</a>
+            <a class="button button-primary" href="https://www.doordash.com/convenience/store/24620532" target="_blank" rel="noreferrer">Order On DoorDash</a>
+            <span class="text-pill">We're on Bevz</span>
+            <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=1943+S+Coast+Hwy+Oceanside+CA+92054" target="_blank" rel="noreferrer">Get Directions</a>
           </div>
         </div>
-
         <aside class="hero-card">
           <div class="stat-block">
             <span class="stat-label">Address</span>
@@ -78,171 +65,90 @@
           </div>
           <div class="stat-block">
             <span class="stat-label">Hours</span>
-            <strong>Every day<br>7:00 AM - 12:00 AM</strong>
+            <strong>Sunday - Saturday<br>7:00 AM - 12:00 AM</strong>
           </div>
           <div class="stat-block stat-highlight">
-            <span class="stat-label">Why locals stop here</span>
-            <strong>Known for low prices and welcoming staff</strong>
+            <span class="stat-label">Known For</span>
+            <strong>Low prices, cold drinks, and quick grab-and-go convenience</strong>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="model-stage">
-      <div class="model-stage-inner">
-        <div class="model-stage-copy">
-          <p class="eyebrow">3D Viewer</p>
-          <h2>Explore the gas pump nozzle in 3D.</h2>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Browse Categories</p>
+          <h2>Tap into the pages customers care about most.</h2>
         </div>
-        <div class="model-shell model-shell-cropped">
-          <iframe
-            class="model-frame-embed"
-            title="Gas Pump Nozzle 3D Model"
-            src="https://sketchfab.com/models/5343a980106c41609a4ba34786d8a088/embed?autostart=1&ui_controls=0&ui_infos=0&ui_stop=0&ui_watermark=0&ui_annotations=0&ui_hint=0&ui_theme=dark"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <div class="category-grid">
+          <a class="category-card" href="beer-wine.html">
+            <img src="assets/beer q.avif" alt="Beer and wine products">
+            <div class="category-card-copy">
+              <h3>Beer & Wine</h3>
+              <p>Cold beer picks and wine options for easy stop-ins and quick orders.</p>
+            </div>
+          </a>
+          <a class="category-card" href="soda-beverage.html">
+            <img src="assets/soddddaaaa.avif" alt="Soda and beverages">
+            <div class="category-card-copy">
+              <h3>Soda & Beverage</h3>
+              <p>Cooler favorites, bottled drinks, and easy beverage grabs.</p>
+            </div>
+          </a>
+          <a class="category-card" href="snacks.html">
+            <img src="assets/snackkk.avif" alt="Snacks and chips">
+            <div class="category-card-copy">
+              <h3>Snacks</h3>
+              <p>Chips, salty favorites, and fast snack-stop picks.</p>
+            </div>
+          </a>
+          <a class="category-card" href="candy.html">
+            <img src="assets/candy.avif" alt="Candy items">
+            <div class="category-card-copy">
+              <h3>Candy</h3>
+              <p>Sweet quick-pick items for checkout, cravings, and road trips.</p>
+            </div>
+          </a>
+          <a class="category-card" href="energy-drinks.html">
+            <img src="assets/energy drink.avif" alt="Energy drinks">
+            <div class="category-card-copy">
+              <h3>Energy Drinks</h3>
+              <p>High-energy cooler options for workdays, long drives, and late nights.</p>
+            </div>
+          </a>
+          <a class="category-card" href="specials.html">
+            <img src="assets/ice cream.avif" alt="This week's specials">
+            <div class="category-card-copy">
+              <h3>This Week's Specials</h3>
+              <p>Store picks, grocery-style grabs, and featured convenience items.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Quick Highlights</p>
-          <h2>Built around the things drivers need most.</h2>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="icon-badge">⛽️</div>
-            <h3>Fuel and Diesel</h3>
-            <p>Fill up with reliable gas and diesel at prices locals appreciate.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon-badge">🏪</div>
-            <h3>Convenience Store</h3>
-            <p>Grab drinks, snacks, and everyday essentials without the hassle.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon-badge">⛽</div>
-            <h3>Air Pump</h3>
-            <p>Keep your tires road-ready with an easy-to-access air pump on site.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon-badge">🛵</div>
-            <h3>Delivery Options</h3>
-            <p>Order convenience items for delivery through DoorDash and Bevz.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="delivery" class="section section-contrast">
       <div class="container delivery-panel">
-        <div>
-          <p class="eyebrow">Order Delivery</p>
-          <h2>Need snacks, drinks, or store essentials without the trip?</h2>
-          <p>
-            Order from Liberty Oil Inc online and get convenience items delivered
-            through your preferred app.
-          </p>
-        </div>
-        <div class="delivery-actions">
-          <a
-            class="button button-primary"
-            href="https://www.doordash.com/convenience/store/liberty-oil-inc-oceanside-24620532"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Order on DoorDash
-          </a>
-          <a class="button button-secondary" href="contact.html">Bevz Link Coming Soon</a>
+        <div class="delivery-row">
+          <div>
+            <p class="eyebrow">Delivery</p>
+            <h2>Order store items without making the trip.</h2>
+            <p>Use DoorDash for the full store page or jump straight into the category you want.</p>
+          </div>
+          <div class="page-actions">
+            <a class="button button-primary" href="https://www.doordash.com/convenience/store/24620532" target="_blank" rel="noreferrer">Main DoorDash Store</a>
+            <span class="text-pill">We're on Bevz</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="model-stage model-stage-alt">
-      <div class="model-stage-inner">
-        <div class="model-shell model-shell-cropped">
-          <iframe
-            class="model-frame-embed"
-            title="Gas Tank 3D Model"
-            src="https://sketchfab.com/models/209b14d8f686484f8e435cd2801d5133/embed?autostart=1&ui_controls=0&ui_infos=0&ui_stop=0&ui_watermark=0&ui_annotations=0&ui_hint=0&ui_theme=dark"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="model-stage-copy">
-          <p class="eyebrow">3D Viewer</p>
-          <h2>Rotate the gas tank model right on the page.</h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-layout">
-        <div>
-          <p class="eyebrow">About Liberty Oil Inc</p>
-          <h2>A neighborhood stop with a personal touch.</h2>
-          <p>
-            Liberty Oil Inc is a family-run business that focuses on making every stop
-            easier, friendlier, and more affordable. Whether you are fueling up for work,
-            picking up a late-night drink, or just passing through Oceanside, you will find
-            a team that is glad to help.
-          </p>
-          <a class="text-link" href="about.html">Learn more about our story</a>
-        </div>
-        <div class="info-panel">
-          <h3>What makes us different</h3>
-          <ul class="check-list">
-            <li>Friendly staff and welcoming service</li>
-            <li>Competitive gas prices in the area</li>
-            <li>Open every day for convenience</li>
-            <li>Easy location on South Coast Highway</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section testimonial-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">In The Store</p>
-          <h2>Popular categories people ask for most.</h2>
-        </div>
-        <div class="product-grid">
-          <a class="product-card" href="soda.html">
-            <img src="assets/soda 4.avif" alt="Soda selection at Liberty Oil Inc">
-            <div class="product-copy">
-              <h3>Soda</h3>
-              <p>Cold drinks, familiar favorites, and quick grab-and-go options.</p>
-            </div>
-          </a>
-          <a class="product-card" href="chips.html">
-            <img src="assets/chips 1.avif" alt="Chips selection at Liberty Oil Inc">
-            <div class="product-copy">
-              <h3>Chips</h3>
-              <p>Classic salty snacks for the road, lunch break, or late-night stop.</p>
-            </div>
-          </a>
-          <a class="product-card" href="beer.html">
-            <img src="assets/beer 3.avif" alt="Beer selection at Liberty Oil Inc">
-            <div class="product-copy">
-              <h3>Beer</h3>
-              <p>Convenient store selection with more choices available in store.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Customer Reviews</p>
-          <h2>What people say after stopping by.</h2>
+          <p class="eyebrow">Reviews</p>
+          <h2>Friendly service still stands out.</h2>
         </div>
         <div class="testimonial-grid">
           <blockquote class="testimonial-card">
@@ -261,11 +167,9 @@
             <p>"Very friendly owners who run the place!"</p>
           </blockquote>
         </div>
-        <a class="text-link text-link-light" href="reviews.html">Read the reviews section</a>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -279,9 +183,9 @@
         <p>7:00 AM - 12:00 AM</p>
       </div>
       <div>
-        <h3>Explore</h3>
-        <p><a href="services.html">Services</a></p>
-        <p><a href="contact.html">Contact & Map</a></p>
+        <h3>Quick Links</h3>
+        <p><a href="specials.html">Specials</a></p>
+        <p><a href="snacks.html">Snacks</a></p>
       </div>
     </div>
   </footer>

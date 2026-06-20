@@ -1,157 +1,36 @@
-const categoryAnswers = [
+const assistantRoutes = [
   {
-    name: "beer",
-    keywords: ["beer", "brew", "beers"],
-    response: "Yes, beer is available. I can take you to our beer page or the DoorDash beer category.",
-    href: "beer.html",
-    action: {
-      label: "DoorDash Beer",
-      href: "https://www.doordash.com/convenience/store/24620532/category/beer-1351"
-    }
+    keywords: ["beer", "wine"],
+    response: "Beer and wine have their own page. Taking you there now.",
+    href: "beer-wine.html"
   },
   {
-    name: "chips",
-    keywords: ["chips"],
-    response: "Yes, we have chips. I can take you to our chips page now.",
-    href: "chips.html"
+    keywords: ["soda", "beverage", "drink", "drinks"],
+    response: "Soda and beverage items are on the drink page. Taking you there now.",
+    href: "soda-beverage.html"
   },
   {
-    name: "snacks",
-    keywords: ["snack", "snacks", "crisps"],
-    response: "Yes, snacks are available. I can open the DoorDash snacks category for you.",
-    action: {
-      label: "DoorDash Snacks",
-      href: "https://www.doordash.com/convenience/store/24620532/category/snacks-758"
-    }
+    keywords: ["candy", "sweet", "sweets"],
+    response: "Candy has its own page. Taking you there now.",
+    href: "candy.html"
   },
   {
-    name: "soda",
-    keywords: ["soda", "coke", "pepsi", "soft drink", "soft drinks", "cold drink"],
-    response: "Yes, we carry soda and other cold drinks. Taking you to the soda page now.",
-    href: "soda.html"
+    keywords: ["energy", "red bull", "monster"],
+    response: "Energy drinks are on their own page. Taking you there now.",
+    href: "energy-drinks.html"
   },
   {
-    name: "drinks",
-    keywords: ["drink", "drinks", "mixers"],
-    response: "Yes, drinks and mixers are available. I can open that delivery category for you.",
-    action: {
-      label: "DoorDash Drinks & Mixers",
-      href: "https://www.doordash.com/convenience/store/24620532/category/drinks%20%26%20mixers-814473445767577624"
-    }
+    keywords: ["snack", "snacks", "chips"],
+    response: "Snacks have their own page. Taking you there now.",
+    href: "snacks.html"
   },
   {
-    name: "wine",
-    keywords: ["wine"],
-    response: "Yes, wine is available for delivery.",
-    action: {
-      label: "DoorDash Wine",
-      href: "https://www.doordash.com/convenience/store/24620532/category/wine-1163"
-    }
+    keywords: ["special", "specials", "discount", "deal", "deals", "grocery", "ice cream"],
+    response: "This week's specials page shows store picks like grocery and ice cream items. Taking you there now.",
+    href: "specials.html"
   },
   {
-    name: "tequila",
-    keywords: ["tequila"],
-    response: "Yes, tequila is available for delivery.",
-    action: {
-      label: "DoorDash Tequila",
-      href: "https://www.doordash.com/convenience/store/24620532/category/tequila-30355"
-    }
-  },
-  {
-    name: "vodka",
-    keywords: ["vodka"],
-    response: "Yes, vodka is available for delivery.",
-    action: {
-      label: "DoorDash Vodka",
-      href: "https://www.doordash.com/convenience/store/24620532/category/vodka-30358"
-    }
-  },
-  {
-    name: "seltzers",
-    keywords: ["seltzer", "seltzers", "hard seltzer"],
-    response: "Yes, seltzers and more are available for delivery.",
-    action: {
-      label: "DoorDash Seltzers & More",
-      href: "https://www.doordash.com/convenience/store/24620532/category/seltzers%20%26%20more-830869023863603230"
-    }
-  },
-  {
-    name: "whiskey",
-    keywords: ["whiskey", "whisky"],
-    response: "Yes, whiskey is available for delivery.",
-    action: {
-      label: "DoorDash Whiskey",
-      href: "https://www.doordash.com/convenience/store/24620532/category/whiskey-30361"
-    }
-  },
-  {
-    name: "gin",
-    keywords: ["gin"],
-    response: "Yes, gin is available for delivery.",
-    action: {
-      label: "DoorDash Gin",
-      href: "https://www.doordash.com/convenience/store/24620532/category/gin-30353"
-    }
-  },
-  {
-    name: "rum",
-    keywords: ["rum"],
-    response: "Yes, rum is available for delivery.",
-    action: {
-      label: "DoorDash Rum",
-      href: "https://www.doordash.com/convenience/store/24620532/category/rum-30357"
-    }
-  },
-  {
-    name: "liqueur",
-    keywords: ["liqueur", "liquor"],
-    response: "Yes, liqueur options are available for delivery.",
-    action: {
-      label: "DoorDash Liqueur",
-      href: "https://www.doordash.com/convenience/store/24620532/category/liqueur-3040"
-    }
-  },
-  {
-    name: "grocery",
-    keywords: ["grocery", "groceries", "food"],
-    response: "Yes, grocery items are available for delivery.",
-    action: {
-      label: "DoorDash Grocery",
-      href: "https://www.doordash.com/convenience/store/24620532/category/grocery-753"
-    }
-  },
-  {
-    name: "household",
-    keywords: ["household", "cleaning", "supplies"],
-    response: "Yes, household items are available for delivery.",
-    action: {
-      label: "DoorDash Household",
-      href: "https://www.doordash.com/convenience/store/24620532/category/household-754"
-    }
-  },
-  {
-    name: "non-alcoholic",
-    keywords: ["non alcoholic", "non-alcoholic", "na drinks", "alcohol free"],
-    response: "Yes, non-alcoholic options are available for delivery.",
-    action: {
-      label: "DoorDash Non-Alcoholic",
-      href: "https://www.doordash.com/convenience/store/24620532/category/non-alcoholic-1516"
-    }
-  },
-  {
-    name: "rtd cocktails",
-    keywords: ["rtd", "cocktail", "cocktails", "ready to drink"],
-    response: "Yes, ready-to-drink cocktails are available for delivery.",
-    action: {
-      label: "DoorDash RTD Cocktails",
-      href: "https://www.doordash.com/convenience/store/24620532/category/rtd%20cocktails-2000000000000000136"
-    }
-  }
-];
-
-const generalRoutes = [
-  {
-    keywords: ["hours", "open", "close", "closing", "time"],
+    keywords: ["hours", "open", "close", "time"],
     response: "Liberty Oil Inc is open every day from 7:00 AM to 12:00 AM."
   },
   {
@@ -160,36 +39,59 @@ const generalRoutes = [
     action: { label: "Call Now", href: "tel:+17607548045" }
   },
   {
-    keywords: ["address", "location", "directions", "where are you", "map"],
-    response: "We are at 1943 S Coast Hwy, Oceanside, CA 92054. I can take you to the contact page or directions.",
-    action: { label: "Open Contact Page", href: "contact.html" }
-  },
-  {
-    keywords: ["delivery", "doordash", "bevz", "order"],
-    response: "You can order store items through our delivery options. I can take you to the delivery section now.",
-    href: "index.html#delivery"
-  },
-  {
-    keywords: ["diesel", "gas", "fuel", "air pump", "air"],
-    response: "We offer gas, diesel, a convenience store, and an air pump. Taking you to our services page.",
-    href: "services.html"
+    keywords: ["address", "location", "directions", "map"],
+    response: "Liberty Oil Inc is at 1943 S Coast Hwy, Oceanside, CA 92054.",
+    action: {
+      label: "Get Directions",
+      href: "https://www.google.com/maps/search/?api=1&query=1943+S+Coast+Hwy+Oceanside+CA+92054"
+    }
   }
 ];
+
+const languageOptions = [
+  ["en", "English"], ["es", "Spanish"], ["ar", "Arabic"], ["fr", "French"], ["zh-CN", "Chinese (Simplified)"],
+  ["af", "Afrikaans"], ["sq", "Albanian"], ["am", "Amharic"], ["hy", "Armenian"], ["az", "Azerbaijani"],
+  ["eu", "Basque"], ["be", "Belarusian"], ["bn", "Bengali"], ["bs", "Bosnian"], ["bg", "Bulgarian"],
+  ["ca", "Catalan"], ["ceb", "Cebuano"], ["ny", "Chichewa"], ["co", "Corsican"], ["hr", "Croatian"],
+  ["cs", "Czech"], ["da", "Danish"], ["nl", "Dutch"], ["eo", "Esperanto"], ["et", "Estonian"],
+  ["tl", "Filipino"], ["fi", "Finnish"], ["fy", "Frisian"], ["gl", "Galician"], ["ka", "Georgian"],
+  ["de", "German"], ["el", "Greek"], ["gu", "Gujarati"], ["ht", "Haitian Creole"], ["ha", "Hausa"],
+  ["haw", "Hawaiian"], ["iw", "Hebrew"], ["hi", "Hindi"], ["hmn", "Hmong"], ["hu", "Hungarian"],
+  ["is", "Icelandic"], ["ig", "Igbo"], ["id", "Indonesian"], ["ga", "Irish"], ["it", "Italian"],
+  ["ja", "Japanese"], ["jw", "Javanese"], ["kn", "Kannada"], ["kk", "Kazakh"], ["km", "Khmer"],
+  ["rw", "Kinyarwanda"], ["ko", "Korean"], ["ku", "Kurdish"], ["ky", "Kyrgyz"], ["lo", "Lao"],
+  ["la", "Latin"], ["lv", "Latvian"], ["lt", "Lithuanian"], ["lb", "Luxembourgish"], ["mk", "Macedonian"],
+  ["mg", "Malagasy"], ["ms", "Malay"], ["ml", "Malayalam"], ["mt", "Maltese"], ["mi", "Maori"],
+  ["mr", "Marathi"], ["mn", "Mongolian"], ["my", "Myanmar"], ["ne", "Nepali"], ["no", "Norwegian"],
+  ["or", "Odia"], ["ps", "Pashto"], ["fa", "Persian"], ["pl", "Polish"], ["pt", "Portuguese"],
+  ["pa", "Punjabi"], ["ro", "Romanian"], ["ru", "Russian"], ["sm", "Samoan"], ["gd", "Scots Gaelic"],
+  ["sr", "Serbian"], ["st", "Sesotho"], ["sn", "Shona"], ["sd", "Sindhi"], ["si", "Sinhala"],
+  ["sk", "Slovak"], ["sl", "Slovenian"], ["so", "Somali"], ["su", "Sundanese"], ["sw", "Swahili"],
+  ["sv", "Swedish"], ["tg", "Tajik"], ["ta", "Tamil"], ["tt", "Tatar"], ["te", "Telugu"],
+  ["th", "Thai"], ["tr", "Turkish"], ["tk", "Turkmen"], ["uk", "Ukrainian"], ["ur", "Urdu"],
+  ["ug", "Uyghur"], ["uz", "Uzbek"], ["vi", "Vietnamese"], ["cy", "Welsh"], ["xh", "Xhosa"],
+  ["yi", "Yiddish"], ["yo", "Yoruba"], ["zu", "Zulu"]
+].map(([code, label]) => ({ code, label }));
+
+let currentLanguage = localStorage.getItem("liberty-language") || "en";
+let translateReady = false;
+let pendingLanguageCode = currentLanguage;
 
 function injectAssistant() {
   const shell = document.createElement("section");
   shell.className = "assistant-shell";
   shell.innerHTML = `
     <button class="assistant-toggle" type="button" aria-expanded="false">
-      Ask Liberty Assistant
+      <span class="assistant-toggle-icon" aria-hidden="true">AI</span>
+      <span class="assistant-toggle-label">Ask Liberty Assistant</span>
     </button>
     <div class="assistant-panel" aria-live="polite">
       <h3>Liberty Assistant</h3>
-      <p>Ask about store items, hours, delivery, gas, or directions.</p>
+      <p>Ask about beer and wine, soda, candy, energy drinks, snacks, specials, hours, or directions.</p>
       <div class="assistant-chips">
-        <button class="assistant-chip" type="button" data-question="Where's the soda?">Where's the soda?</button>
-        <button class="assistant-chip" type="button" data-question="Do you have chips?">Do you have chips?</button>
-        <button class="assistant-chip" type="button" data-question="What time are you open?">What time are you open?</button>
+        <button class="assistant-chip" type="button" data-question="Do you have soda?">Soda</button>
+        <button class="assistant-chip" type="button" data-question="Where are the snacks?">Snacks</button>
+        <button class="assistant-chip" type="button" data-question="Show me the specials">Specials</button>
       </div>
       <form class="assistant-form">
         <input type="text" name="question" placeholder="Ask a question..." aria-label="Ask Liberty Assistant a question">
@@ -198,7 +100,7 @@ function injectAssistant() {
         </div>
       </form>
       <div class="assistant-response">
-        <strong>Ready to help.</strong> Ask something like "Where's the soda?" and I'll point you to the right page.
+        <strong>Ready to help.</strong> Ask about categories, hours, or directions.
       </div>
     </div>
   `;
@@ -230,52 +132,283 @@ function injectAssistant() {
   });
 }
 
+function initMobileNav() {
+  const nav = document.querySelector(".nav");
+  const navLinks = nav?.querySelector(".nav-links");
+  if (!nav || !navLinks) {
+    return;
+  }
+
+  const toggle = document.createElement("button");
+  toggle.className = "nav-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Open menu");
+  toggle.innerHTML = `<span class="nav-toggle-lines" aria-hidden="true"></span>`;
+  nav.insertBefore(toggle, navLinks);
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+function injectLanguageSwitcher() {
+  const nav = document.querySelector(".nav");
+  if (!nav || nav.querySelector(".lang-switcher")) {
+    return;
+  }
+
+  const switcher = document.createElement("div");
+  switcher.className = "lang-switcher notranslate";
+  switcher.setAttribute("translate", "no");
+  switcher.innerHTML = `
+    <button class="lang-toggle notranslate" type="button" aria-expanded="false" translate="no">
+      <span>Language</span>
+      <span class="lang-current"></span>
+    </button>
+    <div class="lang-menu notranslate" translate="no">
+      <input class="lang-search notranslate" type="text" placeholder="Search language..." aria-label="Search language" translate="no">
+      <div class="lang-list notranslate" translate="no"></div>
+    </div>
+  `;
+
+  const navLinks = nav.querySelector(".nav-links");
+  nav.insertBefore(switcher, navLinks);
+
+  const toggle = switcher.querySelector(".lang-toggle");
+  const menu = switcher.querySelector(".lang-menu");
+  const search = switcher.querySelector(".lang-search");
+  const list = switcher.querySelector(".lang-list");
+  const currentLabel = switcher.querySelector(".lang-current");
+
+  const renderLanguages = (filter = "") => {
+    const filterLower = filter.trim().toLowerCase();
+    const current = languageOptions.find((language) => language.code === currentLanguage) || languageOptions[0];
+    currentLabel.textContent = current.label;
+
+    const sorted = [
+      current,
+      ...languageOptions.filter((language) => language.code !== current.code)
+    ].filter((language) => language.label.toLowerCase().includes(filterLower));
+
+    list.innerHTML = sorted.map((language) => `
+      <button class="lang-option notranslate ${language.code === currentLanguage ? "active" : ""}" type="button" data-lang="${language.code}" translate="no">
+        <span>${language.label}</span>
+        <span class="lang-check">${language.code === currentLanguage ? "✓" : ""}</span>
+      </button>
+    `).join("");
+
+    list.querySelectorAll(".lang-option").forEach((option) => {
+      option.addEventListener("click", () => {
+        setLanguage(option.dataset.lang || "en");
+        switcher.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  };
+
+  renderLanguages();
+
+  toggle.addEventListener("click", () => {
+    const isOpen = switcher.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    if (isOpen) {
+      search.focus();
+    }
+  });
+
+  search.addEventListener("input", () => renderLanguages(search.value));
+
+  document.addEventListener("click", (event) => {
+    if (!switcher.contains(event.target)) {
+      switcher.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+function ensureGoogleTranslateHost() {
+  if (!document.getElementById("google_translate_element")) {
+    const host = document.createElement("div");
+    host.id = "google_translate_element";
+    host.style.display = "none";
+    document.body.appendChild(host);
+  }
+}
+
+function loadGoogleTranslate() {
+  ensureGoogleTranslateHost();
+
+  window.googleTranslateElementInit = function googleTranslateElementInit() {
+    if (window.google?.translate?.TranslateElement) {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          autoDisplay: false,
+          includedLanguages: languageOptions.map((language) => language.code).join(",")
+        },
+        "google_translate_element"
+      );
+      translateReady = true;
+      applyGoogleLanguage(pendingLanguageCode);
+    }
+  };
+
+  if (!document.querySelector('script[data-google-translate="true"]')) {
+    const script = document.createElement("script");
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    script.dataset.googleTranslate = "true";
+    document.body.appendChild(script);
+  }
+}
+
+function waitForTranslateCombo(callback, tries = 40) {
+  const combo = document.querySelector(".goog-te-combo");
+  if (combo) {
+    callback(combo);
+    return;
+  }
+  if (tries <= 0) {
+    return;
+  }
+  window.setTimeout(() => waitForTranslateCombo(callback, tries - 1), 250);
+}
+
+function applyGoogleLanguage(languageCode) {
+  if (!translateReady) {
+    pendingLanguageCode = languageCode;
+    return;
+  }
+
+  waitForTranslateCombo((combo) => {
+    combo.value = languageCode;
+    combo.dispatchEvent(new Event("change"));
+  });
+
+  document.documentElement.lang = languageCode === "ar" ? "ar" : languageCode;
+  document.documentElement.dir = languageCode === "ar" ? "rtl" : "ltr";
+}
+
+function setLanguage(languageCode) {
+  currentLanguage = languageCode;
+  pendingLanguageCode = languageCode;
+  localStorage.setItem("liberty-language", languageCode);
+  applyGoogleLanguage(languageCode);
+  const currentLabel = document.querySelector(".lang-current");
+  const current = languageOptions.find((language) => language.code === languageCode);
+  if (currentLabel && current) {
+    currentLabel.textContent = current.label;
+  }
+  const list = document.querySelector(".lang-list");
+  if (list) {
+    const search = document.querySelector(".lang-search");
+    const filter = search ? search.value : "";
+    document.querySelector(".lang-switcher")?.remove();
+    injectLanguageSwitcher();
+    const newSearch = document.querySelector(".lang-search");
+    if (newSearch) {
+      newSearch.value = filter;
+      newSearch.dispatchEvent(new Event("input"));
+    }
+  }
+}
+
+function initClickBursts() {
+  const burstTargets = document.querySelectorAll(".category-card, .gallery-card-link");
+  burstTargets.forEach((target) => {
+    const burst = document.createElement("span");
+    burst.className = "click-burst";
+    for (let i = 0; i < 9; i += 1) {
+      const piece = document.createElement("span");
+      piece.className = "confetti-piece";
+      burst.appendChild(piece);
+    }
+    target.appendChild(burst);
+
+    const playBurst = () => {
+      target.classList.remove("burst-active");
+      void target.offsetWidth;
+      target.classList.add("burst-active");
+      window.setTimeout(() => {
+        target.classList.remove("burst-active");
+      }, 760);
+    };
+
+    target.addEventListener("click", playBurst);
+  });
+}
+
+function initScrollReveal() {
+  const targets = document.querySelectorAll(
+    ".hero-copy, .hero-card, .section-heading, .category-card, .delivery-panel, .about-copy, .about-panel, .gallery-card, .special-card, .testimonial-card, .site-footer"
+  );
+
+  if (!targets.length) {
+    return;
+  }
+
+  targets.forEach((target) => target.classList.add("reveal-3d"));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  targets.forEach((target) => observer.observe(target));
+}
+
 function handleAssistantQuestion(question, responseEl) {
   const cleanQuestion = question.trim().toLowerCase();
   if (!cleanQuestion) {
-    responseEl.innerHTML = "<strong>Try a question.</strong> You can ask about soda, chips, beer, wine, grocery, household items, hours, delivery, or directions.";
+    responseEl.innerHTML = "<strong>Try a question.</strong> Ask about beer and wine, soda, candy, snacks, energy drinks, specials, hours, or directions.";
     return;
   }
 
-  const categoryMatch = categoryAnswers.find((entry) =>
+  const languageCommand = cleanQuestion.match(/(?:change|switch|translate).*(?:language|to)\s+(.+)/i);
+  if (languageCommand) {
+    const requested = languageCommand[1].trim().toLowerCase();
+    const found = languageOptions.find((language) => language.label.toLowerCase() === requested || language.label.toLowerCase().includes(requested));
+    if (found) {
+      setLanguage(found.code);
+      responseEl.innerHTML = `<strong>Liberty Assistant:</strong> Changing the language to ${found.label}.`;
+      return;
+    }
+  }
+
+  const match = assistantRoutes.find((entry) =>
     entry.keywords.some((keyword) => cleanQuestion.includes(keyword))
   );
 
-  if (categoryMatch) {
-    respondWithMatch(categoryMatch, responseEl);
+  if (!match) {
+    responseEl.innerHTML = "<strong>I can help with store questions.</strong> Try asking about beer and wine, soda, candy, snacks, energy drinks, specials, hours, or directions.";
     return;
   }
 
-  if (cleanQuestion.includes("meat") || cleanQuestion.includes("seafood") || cleanQuestion.includes("fish")) {
-    responseEl.innerHTML = `
-      <strong>Liberty Assistant:</strong> I do not currently see a dedicated meat or seafood category in the listed delivery menu.
-      You may still find some items under Grocery, or you can call the store for the current selection.
-      <div class="assistant-actions" style="margin-top: 0.8rem;">
-        <a class="button button-secondary" href="https://www.doordash.com/convenience/store/24620532/category/grocery-753" target="_blank" rel="noreferrer">DoorDash Grocery</a>
-        <a class="button button-secondary" href="tel:+17607548045">Call Store</a>
-      </div>
-    `;
-    return;
-  }
-
-  const generalMatch = generalRoutes.find((entry) =>
-    entry.keywords.some((keyword) => cleanQuestion.includes(keyword))
-  );
-
-  if (generalMatch) {
-    respondWithMatch(generalMatch, responseEl);
-    return;
-  }
-
-  responseEl.innerHTML = "<strong>I can help with store questions.</strong> Try asking about chips, snacks, soda, beer, wine, tequila, vodka, whiskey, rum, grocery, household items, non-alcoholic drinks, delivery, hours, gas, or directions.";
-}
-
-function respondWithMatch(match, responseEl) {
   let actionMarkup = "";
   if (match.action) {
     const isExternal = match.action.href.startsWith("http");
-    const rel = isExternal ? ' rel="noreferrer"' : "";
     const target = isExternal ? ' target="_blank"' : "";
+    const rel = isExternal ? ' rel="noreferrer"' : "";
     actionMarkup = `<div class="assistant-actions" style="margin-top: 0.8rem;"><a class="button button-secondary" href="${match.action.href}"${target}${rel}>${match.action.label}</a></div>`;
   }
 
@@ -284,10 +417,16 @@ function respondWithMatch(match, responseEl) {
   if (match.href) {
     window.setTimeout(() => {
       window.location.href = match.href;
-    }, 900);
+    }, 420);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initMobileNav();
+  injectLanguageSwitcher();
+  loadGoogleTranslate();
   injectAssistant();
+  initClickBursts();
+  initScrollReveal();
+  applyGoogleLanguage(currentLanguage);
 });
