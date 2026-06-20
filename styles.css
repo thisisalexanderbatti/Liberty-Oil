@@ -849,8 +849,8 @@ body.discount-open {
   top: 50%;
   left: 50%;
   z-index: 2;
-  width: 4.7rem;
-  margin-left: -2.35rem;
+  width: 6.1rem;
+  margin-left: -3.05rem;
   transform-origin: 50% 0;
   color: var(--white);
   font-weight: 900;
@@ -862,9 +862,9 @@ body.discount-open {
 
 .wheel-label small {
   display: block;
-  font-size: clamp(0.42rem, 1.25vw, 0.58rem);
-  line-height: 1;
-  letter-spacing: 0.04rem;
+  font-size: clamp(0.72rem, 1.8vw, 0.9rem);
+  line-height: 0.95;
+  letter-spacing: 0.035rem;
 }
 
 .wheel-label-0 { transform: rotate(25.714deg) translateY(-142px) rotate(90deg); }
@@ -1339,8 +1339,8 @@ iframe.skiptranslate {
   }
 
   .wheel-label {
-    width: 3.8rem;
-    margin-left: -1.9rem;
+    width: 5rem;
+    margin-left: -2.5rem;
   }
 
   .wheel-label-0 { transform: rotate(25.714deg) translateY(-106px) rotate(90deg); }
